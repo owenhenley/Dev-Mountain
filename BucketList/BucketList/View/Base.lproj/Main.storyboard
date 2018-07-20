@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PPz-2w-VFh">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bucket List-->
+        <scene sceneID="pLz-3q-lIu">
+            <objects>
+                <tableViewController id="fkC-9B-5vf" customClass="ItemListTableViewController" customModule="BucketList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7So-uk-Jo6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="40" id="1jC-mu-AcE" customClass="ItemTableViewCell" customModule="BucketList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1jC-mu-AcE" id="41c-be-VhC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="39.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="164" translatesAutoresizingMaskIntoConstraints="NO" id="Vrx-5e-A5L">
+                                            <rect key="frame" x="10" y="0.0" width="355" height="39.666666666666664"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(bucket list item)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKp-ZQ-gqu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="39.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hX-0s-04f">
+                                                    <rect key="frame" x="281.66666666666669" y="0.0" width="73.333333333333314" height="39.666666666666664"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="73.333333333333314" id="FqC-bF-yau"/>
+                                                        <constraint firstAttribute="height" constant="39.666666666666664" id="HxQ-XH-ARP"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="incomplete"/>
+                                                    <connections>
+                                                        <action selector="itemCompleteTapped:" destination="1jC-mu-AcE" eventType="touchUpInside" id="6NV-mz-7cm"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Vrx-5e-A5L" firstAttribute="top" secondItem="41c-be-VhC" secondAttribute="top" id="Ixe-pr-kxC"/>
+                                        <constraint firstItem="Vrx-5e-A5L" firstAttribute="centerX" secondItem="41c-be-VhC" secondAttribute="centerX" id="OYN-Hm-bgf"/>
+                                        <constraint firstAttribute="bottom" secondItem="Vrx-5e-A5L" secondAttribute="bottom" id="Z94-Cx-vy5"/>
+                                        <constraint firstItem="Vrx-5e-A5L" firstAttribute="leading" secondItem="41c-be-VhC" secondAttribute="leading" constant="10" id="atV-K0-2hw"/>
+                                        <constraint firstAttribute="trailing" secondItem="Vrx-5e-A5L" secondAttribute="trailing" constant="10" id="g4C-W1-GA9"/>
+                                        <constraint firstItem="Vrx-5e-A5L" firstAttribute="centerY" secondItem="41c-be-VhC" secondAttribute="centerY" id="z9Q-mz-262"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="itemCompleteLebel" destination="7hX-0s-04f" id="JCg-1S-tpM"/>
+                                    <outlet property="itemNameLabel" destination="iKp-ZQ-gqu" id="gMn-uZ-M3v"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fkC-9B-5vf" id="nWF-kv-yfA"/>
+                            <outlet property="delegate" destination="fkC-9B-5vf" id="Kw1-5Q-tXq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Bucket List" id="Tel-50-rAW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Mgb-Vv-kFh">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="addButtonTapped:" destination="fkC-9B-5vf" id="rNt-DB-cKp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UYJ-Dr-TVY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="-1.4778325123152709"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tGD-7y-4G4">
+            <objects>
+                <navigationController id="PPz-2w-VFh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="EgE-fi-Lth">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.060365691220000003" green="0.89260848449999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fkC-9B-5vf" kind="relationship" relationship="rootViewController" id="hR9-mu-L7K"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SEw-Vp-wLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-301" y="-1"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="incomplete" width="96" height="96"/>
+    </resources>
+</document>

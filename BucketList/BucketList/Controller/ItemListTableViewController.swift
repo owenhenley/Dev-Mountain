@@ -35,7 +35,7 @@ class ItemListTableViewController: UITableViewController {
             ItemController.shared.loadToPersistantStore() // pull the current info
         }
         
-        let cancelAction = UIAlertAction(title: "Canel", style: .destructive, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
         alertController.addAction(addAction)
         alertController.addAction(cancelAction)
     }

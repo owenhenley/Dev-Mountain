@@ -4,28 +4,34 @@
 ### Week 3 - APIs & Firebase:
 
 Favorite App
+
 ![alt text]()
 
 SpaceX (Unguided)
+
 ![alt text]()
 
 Pokèdex
+
 ![alt text]()
 
 
 ### Week 2 - Protocols and CoreData:
 
 Shopping List (Unguided)
+
 ![alt text]()
 
 
 Bucket List
+
 ![alt text]()
 
 
 ### Week 1 - MVC:
 
 Notes (Unguided)
+
 ![alt text]()
 
 

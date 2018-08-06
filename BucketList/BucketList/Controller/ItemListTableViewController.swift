@@ -31,7 +31,7 @@ class ItemListTableViewController: UITableViewController {
         // creat done cancel actions
         let addAction = UIAlertAction(title: "Add", style: .default) { (_) in
             guard let name = alertController.textFields?[0].text else { return } // creat new name, optional, full teh text from teh alert controller text fild, access the first item for the textfirld array, take teh text field text
-            ItemController.shared.createNewItem(newName: name) //creat new item
+            ItemController.shared.createNewItem(newName: name) //create new item
             ItemController.shared.loadToPersistantStore() // pull the current info
         }
         

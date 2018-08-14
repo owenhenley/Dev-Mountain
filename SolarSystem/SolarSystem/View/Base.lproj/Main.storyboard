@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VJB-ho-7Op">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Solar System-->
+        <scene sceneID="yvG-Qh-4BK">
+            <objects>
+                <tableViewController id="Amr-au-5Bj" customClass="PlanetTableViewController" customModule="SolarSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5lx-NT-gmi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="planetCell" textLabel="H1C-nt-Nkm" style="IBUITableViewCellStyleDefault" id="DhA-n1-TUN">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DhA-n1-TUN" id="X2l-vp-gGt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H1C-nt-Nkm">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                            <color key="textColor" red="0.95788131480000005" green="0.95788131480000005" blue="0.95788131480000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="ywC-9B-8jI" kind="show" identifier="toPlanetDetailVC" id="4BR-NL-aTG"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Amr-au-5Bj" id="IBS-TZ-dbL"/>
+                            <outlet property="delegate" destination="Amr-au-5Bj" id="rMj-vk-2lI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Solar System" id="CEf-FV-ZfC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZVX-Dq-YJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="-148.87556221889056"/>
+        </scene>
+        <!--Planet Detail View Controller-->
+        <scene sceneID="bze-Eo-m52">
+            <objects>
+                <viewController id="ywC-9B-8jI" customClass="PlanetDetailViewController" customModule="SolarSystem" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="82D-WU-yVz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="c8f-Gy-H3R">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="cZP-hV-EIS">
+                                <rect key="frame" x="50" y="40" width="275" height="498"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earth" translatesAutoresizingMaskIntoConstraints="NO" id="kuR-8K-tjO">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="242.66666666666666"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="tvg-vg-T6y">
+                                        <rect key="frame" x="0.0" y="255.66666666666669" width="275" height="242.33333333333331"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance From The Sun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i46-xi-jVp">
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="29.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="0.95788131480000005" green="0.95788131480000005" blue="0.95788131480000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance From The Sun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aa4-6F-Qat">
+                                                <rect key="frame" x="0.0" y="42.333333333333314" width="275" height="29.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="0.95788131480000005" green="0.95788131480000005" blue="0.95788131480000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day Length" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykr-E8-PsR">
+                                                <rect key="frame" x="0.0" y="84.999999999999943" width="275" height="29.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="0.95788131480000005" green="0.95788131480000005" blue="0.95788131480000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day Length" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqY-2y-yNw">
+                                                <rect key="frame" x="0.0" y="127.6666666666667" width="275" height="29.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="0.95788131480000005" green="0.95788131480000005" blue="0.95788131480000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diameter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM7-xJ-2wI">
+                                                <rect key="frame" x="0.0" y="170.33333333333331" width="275" height="29.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="0.95788131480000005" green="0.95788131480000005" blue="0.95788131480000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diameter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mM-CZ-UgN">
+                                                <rect key="frame" x="0.0" y="212.66666666666669" width="275" height="29.666666666666657"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" red="0.95788131480000005" green="0.95788131480000005" blue="0.95788131480000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tvg-vg-T6y" firstAttribute="leading" secondItem="cZP-hV-EIS" secondAttribute="leading" id="bUf-jm-SSZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="tvg-vg-T6y" secondAttribute="trailing" id="kdu-Kc-fbo"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="c8f-Gy-H3R" firstAttribute="trailing" secondItem="xLr-fY-m1A" secondAttribute="trailing" id="1gw-LI-kMo"/>
+                            <constraint firstItem="cZP-hV-EIS" firstAttribute="centerX" secondItem="82D-WU-yVz" secondAttribute="centerX" id="5q5-dR-YNk"/>
+                            <constraint firstItem="xLr-fY-m1A" firstAttribute="bottom" secondItem="cZP-hV-EIS" secondAttribute="bottom" constant="100" id="Eoe-ML-PXv"/>
+                            <constraint firstItem="c8f-Gy-H3R" firstAttribute="top" secondItem="xLr-fY-m1A" secondAttribute="top" id="Mk6-a5-yBM"/>
+                            <constraint firstItem="cZP-hV-EIS" firstAttribute="leading" secondItem="xLr-fY-m1A" secondAttribute="leading" constant="50" id="daW-d8-7r3"/>
+                            <constraint firstItem="cZP-hV-EIS" firstAttribute="top" secondItem="xLr-fY-m1A" secondAttribute="top" constant="40" id="fqx-eO-00j"/>
+                            <constraint firstAttribute="bottom" secondItem="c8f-Gy-H3R" secondAttribute="bottom" id="jFZ-lz-jWs"/>
+                            <constraint firstItem="c8f-Gy-H3R" firstAttribute="leading" secondItem="xLr-fY-m1A" secondAttribute="leading" id="sTN-pt-H43"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xLr-fY-m1A"/>
+                    </view>
+                    <connections>
+                        <outlet property="dayLength" destination="EqY-2y-yNw" id="Usm-9p-rSc"/>
+                        <outlet property="diameter" destination="4mM-CZ-UgN" id="tGJ-ne-0oo"/>
+                        <outlet property="distanceFromSun" destination="Aa4-6F-Qat" id="EKh-Fp-8z5"/>
+                        <outlet property="planetImage" destination="kuR-8K-tjO" id="GfR-em-MBr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mis-n3-RrS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1324" y="-150"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dew-1r-BGb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VJB-ho-7Op" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="lXf-qd-iZ8">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Amr-au-5Bj" kind="relationship" relationship="rootViewController" id="RNy-Z4-jIE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYT-6x-elG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-70" y="-150"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="earth" width="348" height="348"/>
+        <image name="stars.jpg" width="2365" height="1694"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>

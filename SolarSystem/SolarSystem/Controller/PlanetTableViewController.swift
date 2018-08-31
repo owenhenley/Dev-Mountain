@@ -51,8 +51,5 @@ class PlanetTableViewController: UITableViewController {
 				destinationVC.planet = planet
 			}
 		}
-		
 	}
-	
-	
 }

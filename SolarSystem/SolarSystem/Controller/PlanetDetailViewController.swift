@@ -15,12 +15,9 @@ class PlanetDetailViewController: UIViewController {
     @IBOutlet weak var dayLength: UILabel!
     @IBOutlet weak var diameter: UILabel!
     
-//    var planet: String = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
-//        UIImageView.image = UIImage(named: name.lowercased)!
     }
     
     func updateViews() {
@@ -28,9 +25,9 @@ class PlanetDetailViewController: UIViewController {
         
         title = planet.name
         planetImage.image = UIImage(named: planet.imageName)
-        diameter.text = "\(planet.diameter)"
-        distanceFromSun.text = "\(planet.millionKMsFromSun)"
-        dayLength.text = "\(planet.dayLength)"
+        diameter.text = "\(planet.diameter) Kilometers"
+        distanceFromSun.text = "\(planet.millionKMsFromSun) Kilometers"
+        dayLength.text = "\(planet.dayLength) Hours"
     }
     
     var planet: Planet? {
@@ -38,5 +35,4 @@ class PlanetDetailViewController: UIViewController {
             updateViews()
         }
     }
-    
 }

@@ -1,65 +1,47 @@
 # Dev-Mountain
 
-### Week 5 - CloudKit:
+## Week 6 - UI/UX and Programmatic Constraints
 
-Cloud Kit Users
+## Week 5 - CloudKit:
 
-![alt text](https://github.com/owenhenley/Dev-Mountain/blob/master/CloudKitUsers2.0/2018-08-08%2014.02.08.gif)
-
-### Week 4 - Objective-C & APIs:
-
-Movie Search in Objective-C (Unguided)
-
-![alt text]()
-
-Pokèdex in Obj-C & Swift
-
-![alt text]()
-
-State Flags
-
-![alt text]()
+#### Cloud Kit Users
 
 
-### Week 3 - APIs & Firebase:
+## Week 4 - Objective-C & APIs:
 
-Movie Search (Unguided)
+#### Movie Search in Objective-C (Unguided)
 
-![alt text]()
+#### Pokèdex in Obj-C & Swift
 
-Favorite App
-
-![alt text]()
-
-SpaceX (Unguided)
-
-![alt text]()
-
-Pokèdex
-
-![alt text]()
+#### State Flags
 
 
-### Week 2 - Protocols and CoreData:
+## Week 3 - APIs & Firebase:
 
-Shopping List (Unguided)
+#### Movie Search (Unguided)
 
-![alt text]()
+#### Favorite App
 
+#### SpaceX (Unguided)
 
-Bucket List
-
-![alt text]()
-
-
-### Week 1 - MVC:
-
-Notes (Unguided)
-
-![alt text]()
+#### Pokèdex
 
 
-Days Of The Week
+## Week 2 - Protocols and CoreData:
 
-![alt text](https://github.com/owenhenley/Dev-Mountain/blob/master/DaysOfTheWeek2/DaysOfTheWeek.gif)
+#### Shopping List (Unguided)
+
+#### Bucket List
+
+
+## Week 1 - MVC:
+
+#### Notes (Unguided)
+
+#### Days Of The Week
+
+#### Solar System
+
+#### Flashlight
+
 
